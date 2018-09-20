@@ -1,0 +1,17 @@
+<form class="emp-form" #parentTaskForm="ngForm" (ngSubmit)="onSubmit(parentTaskForm)">
+    <input type="hidden" name="Parent_ID" #Parent_ID="ngModel" [(ngModel)]="taskService.selectedParenttask.Parent_ID" />
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="TaskDescription" #parent_Task="ngModel" [(ngModel)]="taskService.selectedParenttask.TaskDescription" placeholder="Task Name" required/>
+      <div class="validation-error" *ngIf="parent_Task.invalid && parent_Task.touched">This Field is required.</div>
+    </div>
+  </div>
+  <div class="form-row">
+      <div class="form-group col-md-8">
+        <button [disabled]="!parentTaskForm.valid" type="submit"  class="btn btn-lg btn-block btn-info"><i class="fa fa-floppy-o"></i>  Submit</button>
+      </div>
+      <div class="form-group col-md-4">
+          <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(parentTaskForm)"><i class="fa fa-repeat"></i> Reset</button>
+        </div>
+    </div>
+</form>

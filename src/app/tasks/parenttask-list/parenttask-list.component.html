@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <tr>
+    <th>Task Names</th>
+  </tr>
+  <tr *ngFor="let parenttask of taskService.parentTaskList">
+<td>{{parenttask.TaskDescription}}</td>
+<td>
+  <a class="btn" (click)="showorEdit(parenttask)">
+    <i class="fa fa-pencil-square-o"></i>
+  </a>
+  <a class="btn text-danger" (click)="onDelete(parenttask.Parent_ID)">
+      <i class="fa fa-trash-o"></i>
+    </a>
+</td>
+  </tr>
+</table> 

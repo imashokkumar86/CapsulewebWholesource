@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+form.emp-form{
+    background-color: #dbdbdb;
+    border-radius: 4px;
+    padding: 10px;
+}
+div.validation-error{
+    color:red;
+    text-align: center;
+}
+
+button:hover,a.btn:hover{
+    cursor: pointer;
+}
+
+  .slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #383333;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.jumbotron {
+    min-height: 90px;
+    
+}

@@ -1,0 +1,25 @@
+<table class="table table-striped">
+  <tr>
+    <th>Task </th>
+    <th>Parent Name</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Priority</th>
+  </tr>
+  <tr *ngFor="let task of taskService.taskList">
+<td>{{task.TaskDec}}</td>
+
+<td>{{task.ParentTaskDesc}}
+<td>{{task.Start_Date | date : "shortDate"}}</td>
+<td>{{task.End_Date | date : "shortDate"}}</td>
+<td>{{task.Priority}}</td>
+<td>
+  <a class="btn" (click)="showorEdit(task)">
+    <i class="fa fa-pencil-square-o"></i>
+  </a>
+  <a class="btn text-danger" (click)="onDelete(task.Task_ID)">
+      <i class="fa fa-trash-o"></i>
+    </a>
+</td>
+  </tr>
+</table> 
